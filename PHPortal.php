@@ -44,5 +44,6 @@ if (mysqli_connect_errno())
 	if ($result != TRUE) echo " query failed!\n ";
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) print_r($row);
 	mysqli_free_result($result);
+        mysqli_close($con);
 	}
 ?>
